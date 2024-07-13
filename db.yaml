@@ -16,8 +16,10 @@
         enabled: yes
 
     - name: db password setup
-      community.msql.mysql_info:
+      community.mysql.mysql_info:
         login_user: root
         login_password: "{{login_password}}"
         filter: version
         ignore_errors: yes
+
+
