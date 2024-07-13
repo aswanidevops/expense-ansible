@@ -1,0 +1,23 @@
+- name: db cofiguration
+  hosts: localhost
+  vars:
+    login_password: ExpenseApp@1
+  become: yes
+  tasks:
+    - name: install mysql-server
+      ansible.builtin.dnf:
+        name: mysql-server
+        state: latest
+
+    - name: mysql service setup
+      ansible.builtin.service:
+        name: mysqld
+        state: started
+        enabled: yes
+
+    - name: db password setup
+      community.msql.mysql_info:
+        login_user: root
+        login_password: "{{login_password}}"
+        filter: version
+        ignore_errors: yes
