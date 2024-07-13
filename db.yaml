@@ -15,6 +15,13 @@
         state: started
         enabled: yes
 
+    - name: install python mysql dependency
+      ansible.builtin.pip:
+        name:
+        - pymysql
+        - cryptography
+
+
 
     - name: db password setup
       community.mysql.mysql_info:
