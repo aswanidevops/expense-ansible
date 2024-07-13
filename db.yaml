@@ -1,7 +1,7 @@
 - name: db cofiguration
   hosts: db
   vars:
-    login_password: ExpenseApp@1
+    login_hosts: db.sireesha.online
   become: yes
   tasks:
     - name: install mysql-server
@@ -18,7 +18,8 @@
     - name: db password setup
       community.mysql.mysql_info:
         login_user: root
-        login_password: "{{login_password}}"
+        login_password: ExpenseApp@1
+        login_hosts: "{{login_hosts}}"
         filter: version
         ignore_errors: yes
 
