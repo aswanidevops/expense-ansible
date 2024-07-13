@@ -24,6 +24,7 @@
         name:
         - pymysql
         - cryptography
+        executable: 3.9
 
 
 
