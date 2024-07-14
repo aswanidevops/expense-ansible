@@ -1,5 +1,5 @@
 - name: db cofiguration
-  hosts: localhost
+  hosts: db
   vars:
     login_host: db.sireesha.online
   vars_prompt:
