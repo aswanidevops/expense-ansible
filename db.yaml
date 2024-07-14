@@ -1,8 +1,8 @@
 - name: configure DB server
-  hosts: localhost
+  hosts: db
   become: yes
   vars:
-    login_host: db.daws78s.online
+    login_host: db.sireesha.online
   vars_prompt:
     - name: mysql_root_password
       prompt: please enter MySQL root password
