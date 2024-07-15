@@ -24,7 +24,7 @@
         name:
           - pymysql
           - cryptography
-      executable: 3.9
+        executable: 3.9
 
     - name: check db connection
       community.mysql.mysql_info:
