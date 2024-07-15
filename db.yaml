@@ -4,9 +4,9 @@
   vars:
     login_host: db.sireesha.online
   var_prompt:
-    - name: mysql_root_password
-      prompt: please enter mysql root password
-      private: no
+  - name: mysql_root_password
+    prompt: please enter mysql root password
+    private: no
   tasks:
     - name: install the nginx server
       ansible.builtin.dnf:
