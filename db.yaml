@@ -5,7 +5,7 @@
     login_host: db.sireesha.online
   vars_prompt:
   - name: mysql_root_password
-    prompt: please enter mysql root password
+    prompt: please enter mysql root passwords
     private: no
   tasks:
     - name: install the nginx server
